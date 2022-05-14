@@ -57,6 +57,19 @@ public class PaymentsAPI extends HttpServlet {
 	 */
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		Map paras = getParasMap(request); 
+		String output = paymentObj.updatePayment(paras.get("hidItemIDSave").toString(), 
+		paras.get("Name").toString(), 
+		paras.get("Email").toString(), 
+		paras.get("Address").toString(), 
+		paras.get("ContactNumber").toString(), 
+		paras.get("CardName").toString(), 
+		paras.get("CreditCardNumber").toString(),
+		paras.get("ExpiryDate").toString(),
+		paras.get("CVV").toString(),
+		paras.get("Amount").toString()); 
+		response.getWriter().write(output); 
 	}
 
 	/**
