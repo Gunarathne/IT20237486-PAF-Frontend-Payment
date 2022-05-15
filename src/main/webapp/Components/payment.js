@@ -139,10 +139,41 @@ function validateItemForm()
 	return "Insert Address";
 }
 
-// No
-	if ($("#ContactNumber").val().trim() == "")
+// Amount
+	if ($("#Amount").val().trim() == "")
 	{
-	return "Insert No";
+	return "Insert Amount";
+	
 }
+// CardName
+	if ($("#CardName").val().trim() == "")
+	{
+	return "Insert CardName";
+	}
+	// CreditCardNumber
+	if ($("#CreditCardNumber").val().trim() == "")
+	{
+	return "Insert CreditCardNumber.";
+}
+
+// ExpiryDate
+	if ($("#ExpiryDate").val().trim() == "")
+	{
+	return "Insert ExpiryDate";
+}
+
+// CVV
+	if ($("#CVV").val().trim() == "")
+	{
+	return "Insert CVV";
+	
+}
+// Amount
+	if ($("#Amount").val().trim() == "")
+	{
+	return "Insert Amount";
+	
+}
+
 	return true;
 }
